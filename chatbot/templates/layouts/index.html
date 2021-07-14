@@ -1,0 +1,268 @@
+{% extends "base.html" %} 
+
+{% block content %}
+<!--Welcome-->
+<div class="row">
+	<div class="col-lg-12">
+		<div class="ibox float-e-margins" style="
+        background-image: url(/static/Content/img/technology.png);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        background-color: #cfd8dc;
+        border: 1px solid #e7eaec;
+      ">
+			<div class="ibox-content text-center p-md" style="background: transparent; border: 0px">
+				<h2>
+					<span class="text-success">Bienvenido a tu Sistema de Informaci&oacute;n Integrado
+					</span>
+				</h2>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--End Welcome -->
+<div class="row default-content">
+	<div class="col-lg-4">
+		<div class="ibox float-e-margins padding-10 margin-bottom-10" style="
+        background-image: url(/static/Content/img/network.png);
+        -webkit-background-size: cover;
+        background-position: center;
+        background-color: #cfd8dc;
+      ">
+			<div class="text-center padding-top-10" style="padding-top: 20px; border: 1px solid #e7eaec">
+				<div class="m-b-md">
+					<h2 class="font-bold no-margins">VILELA ZARATE ESTEFANO</h2>
+					<small><span>SI-INGENIER&#205;A DE SISTEMAS</span></small>
+				</div>
+				<img 
+					src="https://esumweb.unfv.edu.pe/Archive/FTAlumnos/default.jpg"
+					class="img-circle circle-border m-b-md" alt="profile" style="width: 150px; height: 150px" />
+				<br />
+			</div>
+			<div class="widget-text-box box-footer no-padding">
+				<ul class="nav nav-stacked">
+					<li>
+						<a><i class="fa fa-graduation-cap"></i>C&oacute;digo: 2016032644</a>
+					</li>
+					<li>
+						<a><i class="fa fa-building-o"></i>Escuela Profesional: SI-ING. DE
+							SISTEMAS</a>
+					</li>
+					<li>
+						<a><i class="fa fa-building-o"></i>Especialidad: SI-INGENIER&#205;A
+							DE SISTEMAS</a>
+					</li>
+					<li>
+						<a><i class="fa fa-phone"></i>Año de ingreso: 2016</a>
+					</li>
+					<li>
+						<a><i class="fa fa-envelope"></i>Nivel: 04</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-8">
+		<div class="ibox-content">
+			<a class="action" data-controller="ReporteRecord/Index" href="#/RecordAcademico">
+				<div class="col-sm-4">
+					<div class="text-center">
+						<i class="fa fa-file-pdf-o img-circle m-t-xs img-responsive" style="font-size: 70px"></i>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<h3><strong>Record Académico</strong></h3>
+					<p>Muestra la información historica del estudiante.</p>
+				</div>
+				<div class="clearfix"></div>
+			</a>
+		</div>
+	</div>
+	<div class="col-lg-8">
+		<div class="ibox-content">
+			<a class="action" data-controller="Asignatura/Index" href="#/Asignaturas">
+				<div class="col-sm-4">
+					<div class="text-center">
+						<i class="fa fa-list img-circle m-t-xs img-responsive" style="font-size: 70px"></i>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<h3><strong>Lista de Asignaturas</strong></h3>
+					<p>
+						Ingresar&aacute;s a ver tus asignaturas que est&aacute;s
+						matr&iacute;culado, por cada per&iacute;odo respectivo.
+					</p>
+				</div>
+				<div class="clearfix"></div>
+			</a>
+		</div>
+	</div>
+	<div class="col-lg-8">
+		<div class="ibox-content">
+			<a class="action" data-controller="Pago/Index" href="#/Pagos">
+				<div class="col-sm-4">
+					<div class="text-center">
+						<i class="fa fa-credit-card img-circle m-t-xs img-responsive" style="font-size: 70px"></i>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<h3><strong>Lista de Pagos</strong></h3>
+					<p>Muestra el historial de pagos.</p>
+				</div>
+				<div class="clearfix"></div>
+			</a>
+		</div>
+	</div>
+	<div class="col-lg-8">
+		<div class="ibox-content">
+			<a class="action" data-controller="Matricula/Index" href="#/Matricula">
+				<div class="col-sm-4">
+					<div class="text-center">
+						<i class="fa fa-briefcase img-circle m-t-xs img-responsive" style="font-size: 70px"></i>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<h3><strong>Matr&iacute;cula en L&iacute;nea</strong></h3>
+					<p>
+						Permite realizar la Matr&iacute;cula por cada periodo
+						acad&eacute;mico.
+					</p>
+				</div>
+				<div class="clearfix"></div>
+			</a>
+		</div>
+	</div>
+	<div class="col-lg-12">
+		<div class="ibox float-e-margins">
+			<div class="ibox-title">
+				<h5>&nbsp;</h5>
+				<div class="ibox-tools">
+					<a class="collapse-link">
+						<i class="fa fa-chevron-up"></i>
+					</a>
+				</div>
+			</div>
+			<div class="ibox-content ibox-heading">
+				<h3>Eventos y Actividades Acad&eacute;micas!</h3>
+				<small><i class="fa fa-map-marker"></i> Calendario y Fechas.</small>
+			</div>
+			<div class="ibox-content inspinia-timeline">
+				<div class="timeline-item">
+					<div class="row">
+						<div class="col-xs-3 date">
+							<i class="fa fa-file-text"></i>
+							12:00 a.m.
+							<br />
+							<small class="text-navy">21/12/2020</small>
+						</div>
+						<div class="col-xs-9 content btnEventoVer" style="min-height: 120px">
+							<a href="https://gsumweb.unfv.edu.pe/Archive/FTEventos/10000023_2020-1-UNFV_QUINTO_SUPERIOR vFINAL 22.12.202.pdf"
+								target="_black">
+								<div class="row">
+									<div class="col-sm-3">
+										<img src="https://gsumweb.unfv.edu.pe/Archive/FTEventos/10000023_QUINTO SUPERIOR.jpg"
+											width="100px" height="100px" style="border: 6px solid #e7eaec" />
+									</div>
+									<div class="col-sm-9">
+										<p class="m-b-xs">
+											<i class="fa fa-bell-o"></i>
+											<strong>CUADRO DE M&#201;RITO DE ESTUDIANTES DEL QUINTO
+												SUPERIOR PARA EL PROCESO DE MATR&#205;CULA
+												2020-2</strong>
+										</p>
+										<p>
+											Cuadro de m&#233;rito de estudiantes del Quinto Superior
+											para el proceso de Matr&#237;cula 2020-2 (Fuente:
+											Informaci&#243;n del promedio ponderado del Semestre
+											Acad&#233;mico 2020-1)
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="timeline-item">
+					<div class="row">
+						<div class="col-xs-3 date">
+							<i class="fa fa-file-text"></i>
+							12:00 a.m.
+							<br />
+							<small class="text-navy">20/10/2020</small>
+						</div>
+						<div class="col-xs-9 content btnEventoVer" style="min-height: 120px">
+							<a href="https://web2.unfv.edu.pe/sitio/images/pdf/2020/octubre/InstructivoVRAC_DocumentosVirtuales.pdf"
+								target="_black">
+								<div class="row">
+									<div class="col-sm-3">
+										<img src="https://gsumweb.unfv.edu.pe/Archive/FTEventos/10000021_2-1-aviso-importante.jpg"
+											width="100px" height="100px" style="border: 6px solid #e7eaec" />
+									</div>
+									<div class="col-sm-9">
+										<p class="m-b-xs">
+											<i class="fa fa-bell-o"></i>
+											<strong>EMISI&#211;N VIRTUAL DE CERTIFICADOS Y CONSTANCIAS POR
+												LA OCRAC DESDE EL SISTEMA INTEGRADO DE GESTI&#211;N
+												ACAD&#201;MICA SUMWEB</strong>
+										</p>
+										<p>
+											&gt;&gt;&gt; De acuerdo a la Resoluci&#243;n R. N&#176;
+											7629-2020-UNFV se autoriza a la OCRAC la emisi&#243;n de
+											certificados y constancias de manera virtual para
+											Pregrado, Posgrado y Segundas Especialidades de esta Casa
+											de Estudios Superiores mediante el Sistema Integrado de
+											Gesti&#243;n Acad&#233;mica SumWeb &lt;&lt;&lt;
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="timeline-item">
+					<div class="row">
+						<div class="col-xs-3 date">
+							<i class="fa fa-file-text"></i>
+							12:00 a.m.
+							<br />
+							<small class="text-navy">19/10/2020</small>
+						</div>
+						<div class="col-xs-9 content btnEventoVer" style="min-height: 120px">
+							<a href="https://web2.unfv.edu.pe/sitio/destacados/111-2020/453-comunicado-emision-virtual-de-certificados-y-constancias"
+								target="_black">
+								<div class="row">
+									<div class="col-sm-3">
+										<img src="https://gsumweb.unfv.edu.pe/Archive/FTEventos/10000022_101.png"
+											width="100px" height="100px" style="border: 6px solid #e7eaec" />
+									</div>
+									<div class="col-sm-9">
+										<p class="m-b-xs">
+											<i class="fa fa-bell-o"></i>
+											<strong>COMUNICADO N&#176; 013-2020-OCRAC-VRAC-UNFV</strong>
+										</p>
+										<p>
+											&gt;&gt;&gt; Documentos que se emitir&#225;n bajo la
+											modalidad virtual de mediante el Sistema Integrado de
+											Gesti&#243;n Acad&#233;mica SumWeb: 1. Constancia de
+											egresado, 2. Constancia de orden de m&#233;rito, 3.
+											Constancia de notas, 4. Certificado de estudios, 5.
+											Constancia de expediente completo, 6. Constancia de no
+											haber realizado traslado, 7. Record acad&#233;mico, 8.
+											Constancia de ingreso, 9. Constancia de matr&#237;cula y
+											10. Constancia de estudios &lt;&lt;&lt;
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

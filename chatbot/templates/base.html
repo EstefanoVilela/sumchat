@@ -1,0 +1,70 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SumWeb | Estudiante</title>
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{% static 'Content/ui/css/bootstrap.min.css' %}">
+
+    <!--style sum-->
+    <link rel="stylesheet" href="{% static 'Content/ui/css/ui.css' %}">
+
+    <!--sweetalert-->
+    <link rel="stylesheet" href="{% static 'Content/ui/css/plugins/sweetalert/sweetalert.css' %}">
+
+    <!--style sum-->
+    <link rel="stylesheet" href="{% static 'Content/css/css.css' %}">
+    <link rel="stylesheet" href="{% static 'Content/css/chatbot.css' %}">
+</head>
+
+<body>
+    <div id="wrapper">
+        <!--Container Menu-->
+        {% include "partials/sidebar.html" %}
+        <!--End Container Menu-->
+
+        <!--Container Body-->
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                {% include "partials/navbar.html" %}
+            </div>
+            <!--Content-->
+            <div class="wrapper wrapper-content animated fadeInRight full-height-scroll" id="renderContent">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <!--End Content-->
+
+            <!--Footer-->
+            <div class="footer">
+                <div class="pull-right">
+                    <strong>SumWeb v3.0 &#169; 2020</strong>
+                </div>
+                <div>
+                    <b><strong>Copyright &copy; 2020 </strong> SumWeb Solutions S.A.C</b>
+                </div>
+            </div>
+            <!--End Footer-->
+        </div>
+        <!--End Container Body-->
+    </div>
+    {% include 'partials/chat.html' %}
+    {% include 'partials/modal.html' %}
+
+    <!-- Mainly scripts -->
+    <script src="{% static 'Content/ui/js/script.js' %}"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="{% static 'Content/ui/js/inspinia.js' %}"></script>
+    <script src="{%  static 'Content/js/icons.js'%}"></script>
+    <script src="{%  static 'Content/js/chatbot.js'%}"></script>
+</body>
+
+</html>

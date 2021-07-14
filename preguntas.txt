@@ -1,0 +1,72 @@
+
+PREGUNTAS
+=========
+Hola
+HOLA
+HoLa
+hOlA
+hey
+buenas..
+
+Mi nombre es Estéfano
+mÍ nÓmbrÉ És ÉstÉfÁnÓ
+
+¿Cuál es tu nombre?
+cual es tu nombre
+
+¿Cómo estás?
+como estas
+
+cuando fuiste creado
+¿Cuando has sido creado?
+
+¿Qué es la reactualización de matrícula?
+que es la reactualizacion de matricula
+
+¿Cuál es el código de pago para la reactualización de matrícula?
+dime el codigo de pago de la reactualizacion de matricula
+
+¿Con qué asunto debo enviar el correo para la reactualización?
+cual asunto para enviar el correo para la reactualización
+
+¿Con qué boleta de notas debo enviar mi solicitud?
+cual es la boleta de notas que debo enviar mis documentos
+
+¿Cuánto es el tiempo de respuesta de parte de la universidad?
+cuanto es el tiempo de respuesta es para la reactualizacion
+
+¿Dónde puedo conseguir el fut?
+quiero conseguir el fut
+
+¿Cuándo se termina el proceso de reactualización de matrícula?
+en cuanto tiempo termina la reactualzacion de matricula
+
+¿Por qué han actualizado la malla?
+por que han actualizado la malla curricular
+
+¿Podrías mostrarme los bancos del comercio cercanos?
+puedes mostrarme los bancos del comercio cercanos
+
+##
+Cual es el plazo maximo para hacer la reactualizacion de matricula?
+En que momento debo realizar la reactualizacion de matricula?
+##
+
+¿Cuál es el código de pago de la reactualización de matrícula?
+cual es el codigo de pago de la reactualizacion de matricula
+
+finalizar
+
+
+
+
+
+
+
+
+
+
+
+
+
+

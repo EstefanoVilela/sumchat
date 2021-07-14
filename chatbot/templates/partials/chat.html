@@ -1,0 +1,41 @@
+<section class="msger">
+    <header class="msger-header">
+        <div class="msger-header-title">
+            <i class="fas fa-graduation-cap"></i>
+            UNFV Chatbot
+            <i class="fas fa-graduation-cap"></i>
+        </div>
+        <button type="button" id="btnMinimize" class="close">
+            <i class="fas fa-minus"></i>
+        </button>
+    </header>
+    <main class="msger-chat">
+        <div class="msg left-msg">
+            <div class="msg-img" style="background-image: url(/static/Content/img/robot.png)"></div>
+            <div class="msg-bubble">
+                <div class="msg-info">
+                    <div class="msg-info-name">UNFVbot</div>
+                    <div class="msg-info-time">12:45</div>
+                </div>
+                <div class="msg-text">
+                    ¡Hola, soy el bot de la UNFV! <br>
+                    Adelante, pregúntame. 😄
+                </div>
+            </div>
+        </div>
+    </main>
+    <form class="msger-inputarea">
+        <input type="text" class="msger-input" id="textInput" placeholder="Enter your message..." />
+        <!-- <button type="submit" class="msger-send-btn">Send</button> -->
+        <button type="button" id="btnStartRec" class="msger-send-btn">
+            <i class="fas fa-microphone"></i>
+        </button>
+    </form>
+</section>
+
+<div id="btnMaximize" class="minimize" style="display: none;">
+    <img title="Empecemos a charlar" src="/static/Content/img/robot.png" class="ico-chat-minimize">
+</div>
+<!-- <button class="btn btn-primary btn-circle btn-minimize">
+    <i class="fa fa-file-pdf-o"></i>
+</button> -->

@@ -1,0 +1,296 @@
+<!-- Modal Insertar o Modificar -->
+<div class="modal fade" id="FormPartidas" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="color: #fff; background-color: #343a40; border-color: #454d55;">
+                <!-- <button type="button" class="close" data-dismiss="modal"> -->
+                <button type="button" class="close" onclick="cerrarModalPartidas()">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h3 id="ManModal-title" class="modal-title">Partida ingreso</h3>
+            </div>
+            <div id="RenderManModal" class="modal-body">
+                <form action="/grabarPartida/" method="POST" id="nuevaPartida">
+                    {%csrf_token%}
+                    <input type="hidden" id="op" name="op">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group row">
+                                <label for="txtcodpart" class="col-sm-4 control-label">Código de partida:</label>
+                                <div class="col-sm-8">
+                                    <input type="number" step="any" name="txtcodpartidai" id="txtcodpartidai" class="form-control" required>
+                                    {{ tpartform.codpartidai.as_hidden }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="txtcodpart" class="col-sm-4 control-label">Código de ingegr:</label>
+                                <div class="col-sm-8">
+                                    <select name="cbingegr" id="cbingegr">
+                                        <option value="">---------</option>
+                                        <option value="I">I</option>
+                                        <option value="E">E</option>
+                                    </select>
+                                    {{ tpartform.ingegr.as_hidden }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="txtcoding" class="col-sm-4 control-label">Código partida ingreso:</label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="text" maxlength="12" name="txtcoding" id="txtcoding" class="form-control" required> -->
+                                    {{ tpartform.codparingr }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="txtdespart" class="col-sm-4 control-label">Descripción de partida:</label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="text" name="txtdespart" id="txtdespart" class="form-control" required> -->
+                                    {{ tpartform.despartida }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="txtflgpart" class="col-sm-4 control-label">Flg de partida:</label>
+                                <div class="col-sm-8">
+                                    <input type="checkbox" id="ckflgpart">
+                                    {{ tpartform.flgcc.as_hidden }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group row">
+                                <label for="txtnivel" class="col-sm-4 control-label">Nivel:</label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="number" step="any" name="txtnivel" id="txtnivel" class="form-control" required> -->
+                                    {{ tpartform.nivel }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="txtunidad" class="col-sm-4 control-label">Unidad:</label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="text" maxlength="5" name="txtunidad" id="txtunidad" class="form-control" required> -->
+                                    {{ tpartform.unimed }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="txtsemilla" class="col-sm-4 control-label">Semilla:</label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="number" name="txtsemilla" id="txtsemilla" class="form-control"> -->
+                                    {{ tpartform.semilla }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="txtpadre" class="col-sm-4 control-label">Padre:</label>
+                                <div class="col-sm-8">
+                                    <select name="idccpadre" id="id_idccpadre">
+                                        <option value="">---------</option>
+                                    </select>
+                                    {# tpartform.idccpadre #}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="txtvigente" class="col-sm-4 control-label">Vigente:</label>
+                                <div class="col-sm-8">
+                                    <input type="checkbox" id="ckvigente">
+                                    {{ tpartform.vigente.as_hidden }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="FormPresupuesto" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="color: #fff; background-color: #343a40; border-color: #454d55;">
+                <button type="button" class="close" onclick="cerrarModalPresupuestos()">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h3 id="ManModal-title" class="modal-title">Nuevo presupuesto</h3>
+            </div>
+            <div id="RenderManModal" class="modal-body">
+                <form action="/grabarPresupuestos/" method="POST" id="nuevoPresupuesto">
+                    <input type="hidden" name="op" id="op">
+                    {%csrf_token%}
+                    <div class="row">
+                        <div class="col-sm-6">
+                            {{ tpdetform.ingegr.as_hidden }}
+                            <div class="form-group row">
+                                <label for="cbocodpyto" class="col-sm-4">Código del proyecto: </label>
+
+                                <div class="col-sm-8">
+                                    <select name="codpyto" id="id_codpyto" required>
+                                        <option value="">---------</option>
+                                        {%for c in codigos%}
+                                            <option value="{{c.codpyto}}">{{c.codpyto}} - {{c.nompyto}}</option>
+                                        {%endfor%}
+                                    </select>
+                                    {# tpresform.codpyto #}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="txtnumver" class="col-sm-4">Número de versión: </label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="text" maxlength="1" step="any" name="txtnumver" id="txtnumver" class="form-control" required> -->
+                                    {{ tpresform.nroversion }}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="cbocodpar" class="col-sm-4">Código de partida: </label>
+                                <div class="col-sm-8">
+                                    <!-- <select name="codpartidai" id="id_codpartidai" required>
+                                        <option value="">---------</option>
+                                        {%for i in ingresos%}
+                                            <option value="{{i.codpartidai}}">{{i.codpartidai}} - {{ i.despartida }}</option>
+                                        {%endfor%}
+                                    </select> -->
+                                    {{ tpdetform.codpartidai }}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="cbomoneda" class="col-sm-4">Tipo de moneda: </label>
+                                <div class="col-sm-8">
+                                    <!-- <select name="idmon" id="id_idmon" required>
+                                        <option value="">---------</option>
+                                        {%for m in monedas%}
+                                            <option value="{{m.idmon}}">{{m.denmon}}</option>
+                                        {%endfor%}
+                                    </select> -->
+                                    {{ tpdetform.idmon }}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="txtimpor" class="col-sm-4">Importe: </label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="number" step="any" name="txtimpor" id="txtimpor" class="form-control" required> -->
+                                    {{ tpdetform.impmo }}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="txttipcam" class="col-sm-4">Tipo de cambio: </label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="number" step="any" name="txttipcam" id="txttipcam" class="form-control" required> -->
+                                    {{ tpdetform.tipcambio }}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="txtimpnac" class="col-sm-4">Importe moneda nacional: </label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="number" step="any" name="txtimpnac" id="txtimpnac" class="form-control" disabled> -->
+                                    {{ tpdetform.impmn }}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="txtcant" class="col-sm-4">Cantidad: </label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="number" name="txtcant" id="txtcant" class="form-control" required> -->
+                                    {{ tpdetform.cant }}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="txtperiodo" class="col-sm-4">Periodo: </label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="number" step="any" name="txtperiodo" id="txtperiodo" class="form-control" required> -->
+                                    {{ tpdetform.periodo }}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="txtsemi1" class="col-sm-4">Semilla 1: </label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="number" name="txtsemi1" id="txtsemi1" class="form-control" required> -->
+                                    {{ tpdetform.semilla1 }}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="txtsemi2" class="col-sm-4">Semilla 2: </label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="number" name="txtsemi2" id="txtsemi2" class="form-control" required> -->
+                                    {{ tpdetform.semilla2 }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group row">
+                                <label for="dtfecreg" class="col-sm-4">Fecha de registro: </label>
+                                <div class="col-sm-8">
+                                    <input type="date" name="dtfecreg" id="dtfecreg" class="form-control" required>
+                                    {{ tpresform.fecreg.as_hidden }}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="txtcosdir" class="col-sm-4">Costo directo: </label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="number" step="any" name="txtcosdir" id="txtcosdir" class="form-control" required> -->
+                                    {{ tpresform.cosdir }}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="txtlistpr" class="col-sm-4">Gasto: </label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="number" step="any" name="txtlistpr" id="txtlistpr" class="form-control" required> -->
+                                    {{ tpresform.gasggfin }}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="txtimputi" class="col-sm-4">Impuesto utilidad(%): </label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="number" step="any" name="txtimputi" id="txtimputi" class="form-control" required> -->
+                                    {{ tpresform.imputilidad }}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="txtitsi" class="col-sm-4">Importe total sin IGV: </label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="number" step="any" name="txtitsi" id="txtitsi" class="form-control" disabled> -->
+                                    {{ tpresform.imptotsinigv }}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="txtimpigv" class="col-sm-4">Importe con IGV: </label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="number" step="any" name="txtimpigv" id="txtimpigv" class="form-control" disabled> -->
+                                    {{ tpresform.impconigv }}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="txtimptot" class="col-sm-4">Importe total: </label>
+                                <div class="col-sm-8">
+                                    <!-- <input type="number" step="any" name="txtimptot" id="txtimptot" class="form-control" disabled> -->
+                                    {{ tpresform.imptotal }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button type="submit" id="btnGuardar" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

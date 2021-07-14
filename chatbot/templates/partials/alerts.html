@@ -1,0 +1,12 @@
+
+{% if codrpta == 1 %}
+<div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Éxito!</strong> {{ msgrpta }}.
+</div>
+{% elif codrpta == 0 %}
+<div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Error!</strong> {{ msgrpta }}.
+</div>
+{% endif %}
